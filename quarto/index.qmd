@@ -1,0 +1,25 @@
+---
+toc: false
+---
+::: {.columns}
+
+::: {.column width="60%"}
+# Preface {.unnumbered}
+
+Welcome to my book notes website for the book **AI Engineering by _Chip Huyen_**. In this website, I have documented all of my notes for this book, chapter by chapter as I read through the content.
+
+Taking notes from the book you read, not only firms the understanding, but also serves as a quick summary / reference of the key concepts, should you wanna look into at a later point in time.
+
+Normally I do this for my safe keeping, but now I'm trying to document my knowledge journey for the public benefit as well.
+:::
+
+::: {.column width="40%"}
+![](cover.jpeg)
+:::
+::::
+
+::: {.callout-caution appearance="simple"}
+Please don't consider my notes as a _free_ replacement to the actual book. I [strongly encourage you to buy the actual book]{.underline} to compensate for all the efforts the author(s) & publishing house team put together to deliver the book.
+
+All the actual content of the book are the IPs of the book. I'm merely recollecting, summarizing & articulating what I learnt from the book along with my own thoughts & opinions.
+:::

@@ -1,0 +1,142 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "AI Engineering - Book Notes",
+    "section": "",
+    "text": "Preface\nWelcome to my book notes website for the book AI Engineering by Chip Huyen. In this website, I have documented all of my notes for this book, chapter by chapter as I read through the content.\nTaking notes from the book you read, not only firms the understanding, but also serves as a quick summary / reference of the key concepts, should you wanna look into at a later point in time.\nNormally I do this for my safe keeping, but now I’m trying to document my knowledge journey for the public benefit as well.\n\n\n\n\n\n\n\n\n\n\n\nPlease don’t consider my notes as a free replacement to the actual book. I strongly encourage you to buy the actual book to compensate for all the efforts the author(s) & publishing house team put together to deliver the book.\nAll the actual content of the book are the IPs of the book. I’m merely recollecting, summarizing & articulating what I learnt from the book along with my own thoughts & opinions.",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "intro.html",
+    "href": "intro.html",
+    "title": "1  Introduction",
+    "section": "",
+    "text": "This is a book created from markdown and executable code.\nSee Knuth (1984) for additional discussion of literate programming.\n\n\n\n\nKnuth, Donald E. 1984. “Literate Programming.” Comput. J. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction</span>"
+    ]
+  },
+  {
+    "objectID": "summary.html",
+    "href": "summary.html",
+    "title": "Book Summary",
+    "section": "",
+    "text": "In summary, this book has no content whatsoever.",
+    "crumbs": [
+      "Book Summary"
+    ]
+  },
+  {
+    "objectID": "references.html",
+    "href": "references.html",
+    "title": "References",
+    "section": "",
+    "text": "Huyen, C. (2024). In AI Engineering: Building applications with\nfoundation models (1st ed.). O’Reilly Media. Retrieved from https://www.oreilly.com/library/view/ai-engineering/9781098166298/",
+    "crumbs": [
+      "References"
+    ]
+  },
+  {
+    "objectID": "chapter1.html",
+    "href": "chapter1.html",
+    "title": "Chapter 1",
+    "section": "",
+    "text": "This chapter introduces the term AI Engineering and attempts to define how it is different from ML Engineering (which has been there for many years). First the book introduces very concepts like language model, large & frontier models etc and also talks about the opportunity of AI Engineering.\nThere are 2 types of language models conceptually 1) Masked models - Models are trained to predict the fill in the masked words (aka fill in the blanks). These models are useful for classification, translations etc. In other words encoder heavy 2) Autoregressive models - Models are trained to predict the next word in the sequence. These models are useful for text generative tasks such as summarization, instruction following, chatbots etc. In other words, decoder heavy.\nIf the model accepts more than 1 data modality (forms of input), they are Multi-modal-Model .\nWithin the AI Engineering stack, there could be 3 layers (Infrastructure, Model Development & Application Development).\nThe rush and value proposition is on the applications built on top of foundational models and this book argues that knowing how these models are trained and the science behind those models would help make several key long term decisions in choosing, fine-tuning & tweaking the models for application needs. The moat is clearly on the application layers since only handful of large companies can stomach the investments in doing any groundbreaking research on the model creation itself and majority of the industry will add value to the application layer.\nBefore jumping directly to GenAI app development, it is crucial to define the success. Some possible metrics could be 1) LLM output quality 2) Time To First Token (TTFT), Time Per Output Token (TPOT), Overall Latency 3) Cost for the APIs 4) Fairness, Consistency, Accuracy etc.\nUse model evaluation techniques to deal with the probablistic nature of uncertain LLM outputs to gauge whether you are going in right direction, is it worth to invest time and effort on this.\nBasically an enterprise will jump into AI only for 3 reasons:\n\nWithout AI, the company’s main business will be replaced. Eg anything that deals heavily with text content - content creation, copyright etc\nWithout AI the company will miss lot of value creation. Eg anything that can be automated, more productivity with less investment\nWithout AI, the company will be left behind while others are bathing in shiny light. Eg anything that is more of a GPT wrapper\n\nOn the Model development, there are 3 stages\n\nPre-Training - activities including gathering training data, cleaning, tokenziation, embeddings and generating a foundational model to predict the next token effectively\nPost-Training / Fine-Tuning - activities that further train the pre-trained model to produce outputs that are aligned to human preference\n\nFor the ML engineering tasks, several training algo exists and for each task specific labelled dataset is used. ML engineering for the most part is SFT with labelled data. AI Engg on the other hand deals with unstructured data and often self supervised fine tuning is employed. Training to predict the next token is often the only training algorithm that is employed in AI Engg. Hence for AI Engg, the knowledge of ML algos are nice to have but not strictly needed. However the skill to optimize the inference for the hardware is much needed in AI Engg. In case of ML engg, feature engineering esp with tabular data is needed whereas in AI Engg, data cleaning, de-duplication, tokenization, context retrieval etc are more needed.\nAnother important distinction is mindshift . Incase of ML engineering, one would go from Data -&gt; Model -&gt; Product. Incase of AI Engg, we go from Product -&gt; Data -&gt; Model. i.e we use existing models and try to productize . If that is not solving the problem, we augment the model with external KB using RAG etc and finally resort to fine tune the model with custom data, thereby creating a specialized model when needed.",
+    "crumbs": [
+      "Chapter 1"
+    ]
+  },
+  {
+    "objectID": "chapter2.html",
+    "href": "chapter2.html",
+    "title": "Chapter 2",
+    "section": "",
+    "text": "Post Training :\nSFT - Supervised finetuning - Fine tune the pre-trained model with a labelled dataset Preference Finetuning - Further funetune the model to align the output responses to human preferences. This includes - RLHF : reinforcement learning with human feedback (llama2) - DPO : direct preference optimization (llama3)",
+    "crumbs": [
+      "Chapter 2"
+    ]
+  },
+  {
+    "objectID": "chapter2.html#post-training",
+    "href": "chapter2.html#post-training",
+    "title": "Chapter 2",
+    "section": "",
+    "text": "Typical training pipleline\nlow quality data -&gt; self supervised finetuning -&gt; pretrained model -&gt; SFT with labelled data -&gt; SFT Model -&gt; comparison data with RLHF -&gt; Reward model -&gt; Prompt engg with reward model -&gt; final model\n\n\nRLHF / Preference Fine tuning\nRLHF uses human labellers / annotaters to reward comparison data. Humans cannot provide numeric rewards for a given prompt consistently. But they can pick a best response from given choices. This method is working but very slow and often expensive.",
+    "crumbs": [
+      "Chapter 2"
+    ]
+  },
+  {
+    "objectID": "chapter2.html#sampling",
+    "href": "chapter2.html#sampling",
+    "title": "Chapter 2",
+    "section": "Sampling",
+    "text": "Sampling\nThis is also called as Un Embedding Layer . Sampling is basically choosing the best output from available samples. When the model predicts the next token, it produces a logit vector. In case of classification task, the logic vector simply 2 dimensions (yes/no) (spam/not spam) . Each element of the vector contains a probability of that class. i.e yes 90*, no 10% etc. In reality the logic vector contains the learned weights of the corresponding output token, which then sent via Softmax layer to convert that weight to probability.\nFor language model, the probabilistic vector works differently. In this case, the logic vector contains the vocab size dimension. i.e if the vocab size is 50,256, there would 50,2056 elements in the vector with a probability for each token. i.e logit[245] = 0.10 would simply mean 245th token (could something like t)’s probability is 10%.\nIn language model, simply the most probable token won’t be useful. Because if that’s the case, you will always be seeing same output without any context based on the probability of the token patterns seen during the training phase. Instead for the language models, the probability is used as the probability of selecting that output token. i.e For example if the logit of a is 0.9 and t is 0.1, then the output t will be chosen for 10% of the time and the output a will be chosen for 90% of the time, so on so forth.\nAnd because there are too many logit elements on the logit vector due to sheer size of voab size, instead of doing probabilities on the softmax on the vector, it is done as logprobs i.e output probabilities are converted into logarithmic scale and then the probabilities are applied.\nThere are several other strategies used to sample the output token from those probabilities\n\nTemperature - higher the value, more rare tokens are selected than more obvious tokens. This basically achieved by dividing the probability value by this temperature (Xi/T) so that it elevates the probability of less value tokens.\nTop-k - Instead of taking the entire vocab dimension of the logit vector and computing the probabilities, select the top K elements and then do the probability calculation, thereby reducing the compute load.\nTop-p - Also known as nucleus sampling, instead of selecting the top K samples, select the list of tokens that cumulatively satisfies the top p. If p is 90% (0.9) and if token a is 89% and t is 1%, then only these 2 tokens are selected.\nStopping Condition - Give a total token count to stop sampling or use a special token like eos, stop word to stop sampling.\n\n\nTest Time Compute\nThe process of selecting the whole output for a completion task. The more the compute, the more token it can generate. Generating multiple responses for a single query often improves overall model performance but comes with the inference cost. This is the choices [] seen at the OpenAI completions API response. OpenAI found that the model performance plateaued at 400 outputs mark. i.e if the number of outputs is &gt; 400, it doesn’t contribute to the model performance. Also to ensure accuracy, these multiple outputs can used to select the most consistent output as the accurate output.\n\n\nStructured Output\nStructured output can be achieved through 1) prompt engineering with examples - this often works but not always guaranteed 2) post processing - certain mistakes can be handled such as missing a {} or json output cutoff due to context length etc. 3) constrained sampling - Need model knowledge and the ability to influence the sampling using filter of accepted tokens 4) fine tuning - most expensive but most reliable way to train a model to output structured outputs",
+    "crumbs": [
+      "Chapter 2"
+    ]
+  },
+  {
+    "objectID": "chapter2.html#probabilistic-nature-of-llm",
+    "href": "chapter2.html#probabilistic-nature-of-llm",
+    "title": "Chapter 2",
+    "section": "Probabilistic Nature of LLM",
+    "text": "Probabilistic Nature of LLM\n2 main problems with this nature\n\nInconsistent / Indeterministic output for the sample input / slightly different input\n\nUse caching as interim solution\nUse prompt engineering and memory systems\n\nHallucination - where the model generates its own facts not grounded in truth. This probably happens due to the fact that the model cannot distinguish between the training data and the data that it generates.\n\nHow a model learns to produce its own data? 2 school of thoughts\n\nIt happens during RLHF if the human annotaters are training the model with knowledge that the model doesn’t know during training. This teaches the model that it is ok to generate new facts that are not seen in training\nThe model knows that it generating hallucinating response but it still do it because it was told not to do so. Some try to mitigate by adding “Answer Truthfully” “if you are unsure say I don’t know” in system prompts.\n\n\n\nThe two hypotheses discussed complement each other. The self-delusion hypothesis focuses on how self-supervision causes hallucinations, whereas the mismatched internal knowledge hypothesis focuses on how supervision causes hallucinations.\nIt is very hard to detect hallucinations in a generic fashion unless we know for sure the output is not in any training data.\nResearch tasks:\n\nHow to determine the context length based on the model size / architecture?\nHow to estimate FLOPS from the model size / architecture?\nHow is the test time compute difference from prompting the LLM with same prompt again & again.",
+    "crumbs": [
+      "Chapter 2"
+    ]
+  },
+  {
+    "objectID": "chapter3.html",
+    "href": "chapter3.html",
+    "title": "Chapter 3",
+    "section": "",
+    "text": "Coming Soon…",
+    "crumbs": [
+      "Chapter 3"
+    ]
+  },
+  {
+    "objectID": "chapter4.html",
+    "href": "chapter4.html",
+    "title": "Chapter 4",
+    "section": "",
+    "text": "Coming Soon…",
+    "crumbs": [
+      "Chapter 4"
+    ]
+  },
+  {
+    "objectID": "chapter10.html",
+    "href": "chapter10.html",
+    "title": "Chapter 10",
+    "section": "",
+    "text": "Coming Soon…",
+    "crumbs": [
+      "Chapter 10"
+    ]
+  },
+  {
+    "objectID": "chapter5.html",
+    "href": "chapter5.html",
+    "title": "Chapter 5",
+    "section": "",
+    "text": "Coming Soon…",
+    "crumbs": [
+      "Chapter 5"
+    ]
+  },
+  {
+    "objectID": "chapter6.html",
+    "href": "chapter6.html",
+    "title": "Chapter 6",
+    "section": "",
+    "text": "Coming Soon…",
+    "crumbs": [
+      "Chapter 6"
+    ]
+  }
+]

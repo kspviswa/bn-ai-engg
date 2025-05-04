@@ -1,0 +1,41 @@
+---
+author: Viswa Kumar
+page-layout: full
+---
+
+# Chapter 1 {.unnumbered}
+
+This chapter introduces the term _AI Engineering_ and attempts to define how it is different from _ML Engineering_ (which has been there for many years). First the book introduces very concepts like language model, large & frontier models etc and also talks about the opportunity of AI Engineering.
+
+There are 2 types of language models conceptually
+	1) Masked models - Models are trained to predict the fill in the masked words (aka fill in the blanks). These models are useful for classification, translations etc. In other words _encoder_ heavy
+	2) Autoregressive models - Models are trained to predict the next word in the sequence. These models are useful for text generative tasks such as summarization, instruction following, chatbots etc. In other words, _decoder_ heavy.
+
+If the model accepts more than 1 data modality (forms of input), they are _Multi-modal-Model_ .
+
+Within the AI Engineering stack, there could be 3 layers (Infrastructure, Model Development & Application Development).
+
+The rush and value proposition is on the applications built on top of foundational models and this book argues that knowing how these models are trained and the science behind those models would help make several key long term decisions in choosing, fine-tuning & tweaking the models for application needs. The moat is clearly on the application layers since only handful of large companies can stomach the investments in doing any groundbreaking research on the model creation itself and majority of the industry will add value to the application layer.
+
+Before jumping directly to GenAI app development, it is crucial to define the success. Some possible metrics could be
+1) LLM output quality 
+2) Time To First Token (TTFT), Time Per Output Token (TPOT), Overall Latency
+3) Cost for the APIs
+4) Fairness, Consistency, Accuracy etc.
+
+Use model evaluation techniques to deal with the _probablistic_ nature of uncertain LLM outputs to gauge whether you are going in right direction, is it worth to invest time and effort on this.
+
+Basically an enterprise will jump into AI only for 3 reasons:
+
+1) Without AI, the company's main business will be replaced. Eg anything that deals heavily with text content - content creation, copyright etc
+2) Without AI the company will miss lot of value creation. Eg anything that can be automated, more productivity with less investment
+3) Without AI, the company will be left behind while others are bathing in shiny light. Eg anything that is more of a GPT wrapper
+
+On the Model development, there are 3 stages
+
+- Pre-Training - activities including gathering training data, cleaning, tokenziation, embeddings and generating a foundational model to predict the next token effectively
+- Post-Training / Fine-Tuning - activities that further train the pre-trained model to produce outputs that are aligned to human preference
+
+For the ML engineering tasks, several training algo exists and for each task specific labelled dataset is used. ML engineering for the most part is SFT with labelled data. AI Engg on the other hand deals with unstructured data and often self supervised fine tuning is employed. Training to predict the next token is often the only training algorithm that is employed in AI Engg. Hence for AI Engg, the knowledge of ML algos are nice to have but not strictly needed. However the skill to optimize the inference for the hardware is much needed in AI Engg. In case of ML engg, feature engineering esp with tabular data is needed whereas in AI Engg, data cleaning, de-duplication, tokenization, context retrieval etc are more needed.
+
+Another important distinction is _mindshift_ . Incase of ML engineering, one would go from Data -> Model -> Product. Incase of AI Engg, we go from Product -> Data -> Model. i.e we use existing models and try to productize . If that is not solving the problem, we augment the model with external KB using RAG etc and finally resort to fine tune the model with custom data, thereby creating a specialized model when needed.

@@ -1,0 +1,42 @@
+project:
+  type: book
+
+book:
+  title: "AI Engineering - Book Notes"
+  author: "Viswa Kumar"
+  date: "2025-02-14"
+  chapters:
+    - index.qmd
+    - chapter1.qmd
+    - chapter2.qmd
+    - chapter3.qmd
+    - chapter4.qmd
+    - chapter5.qmd
+    - chapter6.qmd
+    - chapter7.qmd
+    - chapter8.qmd
+    - chapter9.qmd
+    - chapter10.qmd
+    - summary.qmd
+    - references.qmd
+  page-footer: "Book notes for AI Enggineering by Chip Huyen" 
+
+bibliography: references.bibtex
+csl: apa6.csl
+
+format:
+  html:
+    df-print: paged
+    smooth-scroll: true
+    #fontsize: 1em
+    #mainfont: avenir
+    theme: 
+      light: [sketchy, css/light.scss]
+      #dark: [sketchy, css/dark.scss]
+    css: css/styles.css
+
+  pdf:
+    documentclass: scrreprt
+
+
+
