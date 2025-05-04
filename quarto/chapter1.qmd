@@ -1,6 +1,5 @@
 ---
 author: Viswa Kumar
-page-layout: full
 ---
 
 # Chapter 1 {.unnumbered}

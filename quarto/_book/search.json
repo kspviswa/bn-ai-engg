@@ -2,41 +2,11 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "AI Engineering - Book Notes",
+    "title": "Viswa Kumar | Book Notes for AI Engineering by Chip Huyen",
     "section": "",
     "text": "Preface\nWelcome to my book notes website for the book AI Engineering by Chip Huyen. In this website, I have documented all of my notes for this book, chapter by chapter as I read through the content.\nTaking notes from the book you read, not only firms the understanding, but also serves as a quick summary / reference of the key concepts, should you wanna look into at a later point in time.\nNormally I do this for my safe keeping, but now I’m trying to document my knowledge journey for the public benefit as well.\n\n\n\n\n\n\n\n\n\n\n\nPlease don’t consider my notes as a free replacement to the actual book. I strongly encourage you to buy the actual book to compensate for all the efforts the author(s) & publishing house team put together to deliver the book.\nAll the actual content of the book are the IPs of the book. I’m merely recollecting, summarizing & articulating what I learnt from the book along with my own thoughts & opinions.",
     "crumbs": [
       "Preface"
-    ]
-  },
-  {
-    "objectID": "intro.html",
-    "href": "intro.html",
-    "title": "1  Introduction",
-    "section": "",
-    "text": "This is a book created from markdown and executable code.\nSee Knuth (1984) for additional discussion of literate programming.\n\n\n\n\nKnuth, Donald E. 1984. “Literate Programming.” Comput. J. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97.",
-    "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction</span>"
-    ]
-  },
-  {
-    "objectID": "summary.html",
-    "href": "summary.html",
-    "title": "Book Summary",
-    "section": "",
-    "text": "In summary, this book has no content whatsoever.",
-    "crumbs": [
-      "Book Summary"
-    ]
-  },
-  {
-    "objectID": "references.html",
-    "href": "references.html",
-    "title": "References",
-    "section": "",
-    "text": "Huyen, C. (2024). In AI Engineering: Building applications with\nfoundation models (1st ed.). O’Reilly Media. Retrieved from https://www.oreilly.com/library/view/ai-engineering/9781098166298/",
-    "crumbs": [
-      "References"
     ]
   },
   {
@@ -110,16 +80,6 @@
     ]
   },
   {
-    "objectID": "chapter10.html",
-    "href": "chapter10.html",
-    "title": "Chapter 10",
-    "section": "",
-    "text": "Coming Soon…",
-    "crumbs": [
-      "Chapter 10"
-    ]
-  },
-  {
     "objectID": "chapter5.html",
     "href": "chapter5.html",
     "title": "Chapter 5",
@@ -137,6 +97,66 @@
     "text": "Coming Soon…",
     "crumbs": [
       "Chapter 6"
+    ]
+  },
+  {
+    "objectID": "chapter7.html",
+    "href": "chapter7.html",
+    "title": "Chapter 7",
+    "section": "",
+    "text": "Coming Soon…",
+    "crumbs": [
+      "Chapter 7"
+    ]
+  },
+  {
+    "objectID": "chapter8.html",
+    "href": "chapter8.html",
+    "title": "Chapter 8",
+    "section": "",
+    "text": "Coming Soon…",
+    "crumbs": [
+      "Chapter 8"
+    ]
+  },
+  {
+    "objectID": "chapter9.html",
+    "href": "chapter9.html",
+    "title": "Chapter 9",
+    "section": "",
+    "text": "Coming Soon…",
+    "crumbs": [
+      "Chapter 9"
+    ]
+  },
+  {
+    "objectID": "chapter10.html",
+    "href": "chapter10.html",
+    "title": "Chapter 10",
+    "section": "",
+    "text": "Coming Soon…",
+    "crumbs": [
+      "Chapter 10"
+    ]
+  },
+  {
+    "objectID": "summary.html",
+    "href": "summary.html",
+    "title": "Book Summary",
+    "section": "",
+    "text": "Coming soon…",
+    "crumbs": [
+      "Book Summary"
+    ]
+  },
+  {
+    "objectID": "references.html",
+    "href": "references.html",
+    "title": "References",
+    "section": "",
+    "text": "Huyen, C. (2024). In AI Engineering: Building applications with foundation models (1st ed.). O’Reilly Media. Retrieved from https://www.oreilly.com/library/view/ai-engineering/9781098166298/",
+    "crumbs": [
+      "References"
     ]
   }
 ]

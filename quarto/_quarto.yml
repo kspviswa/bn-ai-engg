@@ -2,9 +2,17 @@ project:
   type: book
 
 book:
-  title: "AI Engineering - Book Notes"
+  title: "Viswa Kumar | Book Notes for AI Engineering by Chip Huyen"
   author: "Viswa Kumar"
   date: "2025-02-14"
+  navbar: 
+    right:
+      - href: https://github.com/kspviswa/bn-ai-engg
+        icon: github
+      - href: https://viswakumar.com
+        icon: house-door
+        text: Home
+
   chapters:
     - index.qmd
     - chapter1.qmd
@@ -34,9 +42,6 @@ format:
       light: [sketchy, css/light.scss]
       #dark: [sketchy, css/dark.scss]
     css: css/styles.css
-
-  pdf:
-    documentclass: scrreprt
 
 
 
